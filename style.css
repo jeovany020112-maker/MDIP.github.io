@@ -302,38 +302,89 @@ h2 {
 .link a:hover {
     color: #003f72;
 }
-/* 🔧 AJUSTES SOLO PARA CELULAR */
 @media (max-width: 768px) {
 
-    /* Evita desbordamiento */
+    /* Evitar scroll lateral */
     html, body {
         overflow-x: hidden;
     }
 
-    /* Corrige el bloque que se sale */
-    .header-txt {
-        margin: 0;
+    /* HEADER */
+    .header {
+        flex-direction: column;
     }
 
-    /* Imagen adaptable */
     .header-img img {
         width: 100%;
     }
 
-    /* 🔴 ESTOS SON LOS OTROS PROBLEMAS REALES */
-    .Maquinados-title {
+    .header-img h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .header-txt {
+        margin: 20px 0 0 0; /* en lugar del negativo */
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* MAQUINADOS */
+    .Maquinados-1 {
+        flex-direction: column;
+    }
+
+    .Maquinados-img-1,
+    .Maquinados-img-2,
+    .Maquinados-txt {
+        width: 100%;
+    }
+
+    .Maquinados-img-2 img {
+        width: 100%;
+    }
+
+    /* PADDINGS GRANDES */
+    .Maquinados-title,
+    .choise-content,
+    .blog-txt {
         padding: 0 20px;
     }
 
-    .choise-content {
-        padding: 0 20px;
+    /* PRODUCT */
+    .product {
+        flex-direction: column;
+    }
+
+    .product-1,
+    .product-2 {
+        width: 100%;
     }
 
     .product-2 {
         padding: 20px;
     }
 
-    .blog-txt {
-        padding: 0 20px;
+    .product-1 img {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* BLOG */
+    .blog-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-1,
+    .blog-2 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
