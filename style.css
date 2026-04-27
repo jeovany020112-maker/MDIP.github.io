@@ -302,3 +302,23 @@ h2 {
 .link a:hover {
     color: #003f72;
 }
+.wrapper {  /* AGREGADO DE CHT GPT
+    width: 1200px; /* igual que tu diseño base */
+    margin: 0 auto;
+}
+
+/* 📱 Escalar en celular SIN romper diseño */
+@media (max-width: 768px) {
+    .wrapper {
+        transform: scale(0.5); /* ajusta si quieres 0.6 o 0.7 */
+        transform-origin: top center;
+        width: 1200px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
+
