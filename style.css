@@ -102,7 +102,7 @@ body {
 
 }
 
-.header-txt {
+ .header-txt {
     margin: -150px 0 0 -250px;
     background-color: #003f72;
     padding: 55px 70px;
@@ -320,5 +320,31 @@ h2 {
     }
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
+@media (max-width: 768px) {
+    body {
+        zoom: 0.5; /* prueba 0.6 o 0.7 si se ve muy chico */
+    }
+}
 
+/* 🔧 AJUSTES SOLO PARA CELULAR */
+@media (max-width: 768px) {
+
+    /* 1. Quitar margen que rompe el layout */
+    .header-txt {
+        margin: 0;
+    }
+
+    /* 2. Imagen que se salía */
+    .header-img img {
+        width: 100%;
+    }
+
+    /* 3. Evitar que elementos se salgan */
+    html, body {
+        overflow-x: hidden;
+    }
+}
