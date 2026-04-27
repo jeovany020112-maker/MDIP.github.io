@@ -304,87 +304,44 @@ h2 {
 }
 @media (max-width: 768px) {
 
-    /* Evitar scroll lateral */
-    html, body {
-        overflow-x: hidden;
+    /* MOSTRAR BOTÓN HAMBURGUESA */
+    .menu label {
+        display: block;
     }
 
-    /* HEADER */
+    /* OCULTAR MENÚ POR DEFECTO */
+    .menu .navbar {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #001c33;
+        display: none;
+        z-index: 1000;
+    }
+
+    /* CUANDO SE ACTIVA */
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+
+    /* MENÚ EN VERTICAL (AQUÍ ESTABA EL PROBLEMA) */
+    .menu .navbar ul li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu .navbar ul li a {
+        padding: 15px;
+    }
+
+    /* EVITA QUE EL HEADER SE ENCIME */
     .header {
         flex-direction: column;
     }
 
-    .header-img img {
-        width: 100%;
-    }
-
-    .header-img h1 {
-        font-size: 60px;
-        line-height: 60px;
-    }
-
-    .header-txt {
-        margin: 20px 0 0 0; /* en lugar del negativo */
-        width: 100%;
-        padding: 20px;
-    }
-
-    /* MAQUINADOS */
-    .Maquinados-1 {
-        flex-direction: column;
-    }
-
-    .Maquinados-img-1,
-    .Maquinados-img-2,
-    .Maquinados-txt {
-        width: 100%;
-    }
-
-    .Maquinados-img-2 img {
-        width: 100%;
-    }
-
-    /* PADDINGS GRANDES */
-    .Maquinados-title,
-    .choise-content,
-    .blog-txt {
-        padding: 0 20px;
-    }
-
-    /* PRODUCT */
-    .product {
-        flex-direction: column;
-    }
-
-    .product-1,
-    .product-2 {
-        width: 100%;
-    }
-
-    .product-2 {
-        padding: 20px;
-    }
-
-    .product-1 img {
-        width: 100%;
-        margin: 0;
-    }
-
-    /* BLOG */
-    .blog-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .blog-1,
-    .blog-2 {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    /* FOOTER */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    .header-content {
+        margin-top: 60px;
     }
 }
