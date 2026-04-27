@@ -302,49 +302,38 @@ h2 {
 .link a:hover {
     color: #003f72;
 }
-.wrapper {  /* AGREGADO DE CHT GPT
-    width: 1200px; /* igual que tu diseño base */
-    margin: 0 auto;
-}
-
-/* 📱 Escalar en celular SIN romper diseño */
-@media (max-width: 768px) {
-    .wrapper {
-        transform: scale(0.5); /* ajusta si quieres 0.6 o 0.7 */
-        transform-origin: top center;
-        width: 1200px;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-}
-
-html, body {
-    overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-    body {
-        zoom: 0.5; /* prueba 0.6 o 0.7 si se ve muy chico */
-    }
-}
-
 /* 🔧 AJUSTES SOLO PARA CELULAR */
 @media (max-width: 768px) {
 
-    /* 1. Quitar margen que rompe el layout */
+    /* Evita desbordamiento */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Corrige el bloque que se sale */
     .header-txt {
         margin: 0;
     }
 
-    /* 2. Imagen que se salía */
+    /* Imagen adaptable */
     .header-img img {
         width: 100%;
     }
 
-    /* 3. Evitar que elementos se salgan */
-    html, body {
-        overflow-x: hidden;
+    /* 🔴 ESTOS SON LOS OTROS PROBLEMAS REALES */
+    .Maquinados-title {
+        padding: 0 20px;
+    }
+
+    .choise-content {
+        padding: 0 20px;
+    }
+
+    .product-2 {
+        padding: 20px;
+    }
+
+    .blog-txt {
+        padding: 0 20px;
     }
 }
