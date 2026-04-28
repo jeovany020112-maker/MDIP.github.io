@@ -304,44 +304,25 @@ h2 {
 }
 @media (max-width: 768px) {
 
-    /* MOSTRAR BOTÓN HAMBURGUESA */
-    .menu label {
-        display: block;
+    /* 🔴 CORRECCIÓN PRINCIPAL */
+    .header-img h1 {
+        font-size: 12vw;   /* se adapta al ancho de pantalla */
+        line-height: 1.1;
     }
 
-    /* OCULTAR MENÚ POR DEFECTO */
-    .menu .navbar {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #001c33;
-        display: none;
-        z-index: 1000;
-    }
-
-    /* CUANDO SE ACTIVA */
-    #menu:checked ~ .navbar {
-        display: block;
-    }
-
-    /* MENÚ EN VERTICAL (AQUÍ ESTABA EL PROBLEMA) */
-    .menu .navbar ul li {
-        float: none;
+    /* 🔴 EVITA QUE EL CUADRO AZUL CORTE TODO */
+    .header-txt {
         width: 100%;
-        text-align: center;
+        margin: 20px 0 0 0;
     }
 
-    .menu .navbar ul li a {
-        padding: 15px;
+    /* 🔴 IMAGEN FLEXIBLE */
+    .header-img img {
+        width: 100%;
     }
 
-    /* EVITA QUE EL HEADER SE ENCIME */
-    .header {
-        flex-direction: column;
-    }
-
-    .header-content {
-        margin-top: 60px;
+    /* 🔴 EVITA DESBORDE GENERAL */
+    html, body {
+        overflow-x: hidden;
     }
 }
