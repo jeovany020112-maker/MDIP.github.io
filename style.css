@@ -304,25 +304,91 @@ h2 {
 }
 @media (max-width: 768px) {
 
-    /* 🔴 CORRECCIÓN PRINCIPAL */
+    /* Quitar desbordes */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* 🔴 HEADER SE VUELVE VERTICAL */
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content {
+        padding: 40px 20px;
+    }
+
+    /* TEXTO GRANDE RESPONSIVO */
     .header-img h1 {
-        font-size: 12vw;   /* se adapta al ancho de pantalla */
-        line-height: 1.1;
+        font-size: 14vw;
+        line-height: 1;
+        text-align: center;
     }
 
-    /* 🔴 EVITA QUE EL CUADRO AZUL CORTE TODO */
-    .header-txt {
-        width: 100%;
-        margin: 20px 0 0 0;
-    }
-
-    /* 🔴 IMAGEN FLEXIBLE */
+    /* IMAGEN FLEXIBLE */
     .header-img img {
         width: 100%;
     }
 
-    /* 🔴 EVITA DESBORDE GENERAL */
-    html, body {
-        overflow-x: hidden;
+    /* 🔴 ELIMINAMOS EL TRUCO QUE ROMPE TODO */
+    .header-txt {
+        width: 100%;
+        margin: 20px 0 0 0; /* adiós margen negativo */
+        padding: 20px;
+    }
+
+    /* 🔴 TODO ESTO EVITA QUE SE ENCIME */
+    .Maquinados-1 {
+        flex-direction: column;
+    }
+
+    .Maquinados-img-1,
+    .Maquinados-img-2,
+    .Maquinados-txt {
+        width: 100%;
+    }
+
+    .Maquinados-img-2 img {
+        width: 100%;
+    }
+
+    /* 🔴 PADDINGS EXAGERADOS */
+    .Maquinados-title,
+    .choise-content,
+    .blog-txt {
+        padding: 0 20px;
+    }
+
+    /* 🔴 PRODUCTO */
+    .product {
+        flex-direction: column;
+    }
+
+    .product-1,
+    .product-2 {
+        width: 100%;
+    }
+
+    .product-2 {
+        padding: 20px;
+    }
+
+    /* 🔴 BLOG */
+    .blog-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-1,
+    .blog-2 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* 🔴 FOOTER */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
